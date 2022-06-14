@@ -363,7 +363,7 @@ abstract contract SecurityManager is BaseModule {
             abi.encodePacked(_wallet, _guardian, "addition")
         );
         GuardianManagerConfig storage config = guardianConfigs[_wallet];
-        require(config.pending[id] > 0, "SM: unknown pending addition");
+        require(config.pending[id] > 0, "SM: unknown pending addition.");
         require(
             config.pending[id] < block.timestamp,
             "SM: pending addition not over"
